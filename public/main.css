@@ -1,0 +1,19 @@
+img {
+    width: 200px;
+    /* height: 200px; */
+}
+
+.catContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.breed {
+    padding: 10px;
+}
+
+.checked {
+    color: orange;
+  }

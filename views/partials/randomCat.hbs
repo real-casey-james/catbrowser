@@ -1,0 +1,31 @@
+<script>
+var oXHR = new XMLHttpRequest();
+ oXHR.onreadystatechange = reportStatus;
+    oXHR.open("GET", "https://aws.random.cat/meow", true);  
+    oXHR.send();
+    function reportStatus() {
+        if (oXHR.readyState == 4) {		
+            var x = JSON.parse(this.responseText)
+            document.getElementById('showData').src = x.file;
+        }
+    }
+</script>
+
+<script>
+var nextoXHR = new XMLHttpRequest();
+ nextoXHR.onreadystatechange = reportStatus;
+    nextoXHR.open("GET", "https://catfact.ninja/fact", true);  
+    nextoXHR.send();
+    function reportStatus() {
+        if (nextoXHR.readyState == 4) {		
+            var z = JSON.parse(this.responseText)
+            document.getElementById('catFact').innerHTML = z.fact;
+        }
+    }
+</script>
+
+
+<p>Random Cat Fact</p>
+<p id="catFact"><p>
+<p>Random Cat Photo</p>
+<img id="showData" src="">

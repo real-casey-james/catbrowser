@@ -1,0 +1,14 @@
+<a href="/">Home</a>
+
+<div class="infoContainer">
+    <p>{{name}}</p>
+    <img src="{{image.url}}">
+    <p>Temperament: {{temperament}}</p>
+    <p>{{description}}</p>
+    <p>Intelligence: {{> (lookup . "intelligence") }}</p>
+    <p>Energy Level: {{> (lookup . "energy_level") }}</p>
+    <p>Affection Level: {{> (lookup . "affection_level") }}</p>
+
+    <a href="{{wikipedia_url}}"><p>Wikipedia</p></a>
+</div>
+    {{>comments}}

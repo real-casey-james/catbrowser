@@ -1,0 +1,12 @@
+<h2>Cats by Breed</h2>
+<a href="/">Home</a>
+<div class="catContainer">
+{{#each catBreeds}}
+    <a href="../breeds/{{name}}">
+    <div class="breed">
+        <h3>{{name}}</h3>
+        <img src="{{image.url}}">
+    </div>
+    </a>
+{{/each}}
+</div>
