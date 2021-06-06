@@ -63,14 +63,6 @@
         "3": {
           "name": "Moretest",
           "comment": "morecomment"
-        },
-        "4": {
-          "name": "Moretest",
-          "comment": "sdfsdf"
-        },
-        "5": {
-          "name": "Test",
-          "comment": "sadas"
         }
       }
     },
@@ -117,7 +109,8 @@
         "width": 1200,
         "height": 800,
         "url": "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg"
-      }
+      },
+      "comments": {}
     },
     {
       "weight": {
@@ -2154,7 +2147,8 @@
         "width": 1200,
         "height": 1021,
         "url": "https://cdn2.thecatapi.com/images/06dgGmEOV.jpg"
-      }
+      },
+      "comments": {}
     },
     {
       "weight": {

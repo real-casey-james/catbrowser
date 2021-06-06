@@ -16,7 +16,6 @@
 <div class="commentSection">
     {{#each comments}}
     <div class="comment">
-        <p>Breed name: {{../name}}</p>
     <p>Name: {{name}}</p>
     <p>Comment: {{comment}}</p>
     <form method="POST" action="{{../name}}/comment/{{@key}}?_method=DELETE"><button type="submit">Delete</button></form>

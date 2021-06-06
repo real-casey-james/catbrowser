@@ -48,7 +48,8 @@ router.get('/breeds/:cat', (req, res) => {
       const parsedData = JSON.parse(data)
       const theOne = parsedData.catBreeds.find(cat => cat.name === catName)
       theOne.comments = theOne.comments || {}
-      var id = Object.keys(theOne.comments).length || 0
+      var ids = Object.keys(theOne.comments)
+      var id = Number(ids[ids.length - 1]) + 1 || 0
       theOne.comments[id] = theOne.comments[id] || {}
       theOne.comments[id].name = name
       theOne.comments[id].comment = comment
@@ -69,15 +70,11 @@ console.log('working')
     if (err) return res.status(500).send(err.message)
     const parsedData = JSON.parse(data)
     const theOne = parsedData.catBreeds.find(cat => cat.name === catName)
-    console.log(theOne.comments[id])
-    
-    
-    // const theComment = theOne.comments.find(comment => comment == id)
-    
-    // var newData = JSON.stringify(parsedData, null, 2)
-    // fs.writeFile('./data.json', newData, (err) => {})
+    delete theOne.comments[id]    
+    var newData = JSON.stringify(parsedData, null, 2)
+    fs.writeFile('./data.json', newData, (err) => {})
     })
-    // res.redirect('back')
+    res.redirect('back')
 })
 
 // GET home page

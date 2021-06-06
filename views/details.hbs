@@ -1,14 +1,38 @@
-<a href="/">Home</a>
+<div class="navContainer">
+<a class="nav" id="breeds" href="/views/breed">all breeds</a>
+<a class="nav" id="hairless" href="/views/hairless">hairless</a>
+<a class="nav" id="experimental" href="/views/experimental">experimental</a>
+<a class="nav" id="rare" href="/views/rare">rare</a>
+<a class="nav" id="indoor" href="/views/indoor">indoor</a>
+</div>
 
+    <h4>{{name}}</h4>
 <div class="infoContainer">
-    <p>{{name}}</p>
-    <img src="{{image.url}}">
-    <p>Temperament: {{temperament}}</p>
-    <p>{{description}}</p>
-    <p>Intelligence: {{> (lookup . "intelligence") }}</p>
-    <p>Energy Level: {{> (lookup . "energy_level") }}</p>
-    <p>Affection Level: {{> (lookup . "affection_level") }}</p>
-
-    <a href="{{wikipedia_url}}"><p>Wikipedia</p></a>
+    <img class="clickable-image" id="catDetails" src="{{#if image.url}}{{image.url}}{{else}}https://media0.giphy.com/media/26gswUHdouGJf4L6w/giphy.gif{{/if}}">
+    <div id="info">
+        <p>{{description}}</p>
+        <p>Temperament: {{temperament}}</p>
+        <span><label>Intelligence:</label> {{> (lookup . "intelligence") }}</span>
+        <span><label>Energy Level:</label> {{> (lookup . "energy_level") }}</span>
+        <span><label>Affection Level:</label> {{> (lookup . "affection_level") }}</span><br>
+        <a href="{{wikipedia_url}}"><span id="wikiLink">Wikipedia</span></a>
+    </div>
 </div>
     {{>comments}}
+
+
+    <script>
+        const image = document.querySelector(".clickable-image");
+        var state = "closed"
+        image.addEventListener("click", () =>{
+            if (state == "closed") {
+            image.classList.add("image-open");
+            image.classList.remove("image-close");
+            state = "open"
+            } else {
+                image.classList.add("image-close");
+                image.classList.remove("image-open");
+                state = "closed"
+            }
+        })
+        </script>

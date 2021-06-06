@@ -1,12 +1,18 @@
-<h2>Cats by Breed</h2>
-<a href="/">Home</a>
+<div class="navContainer">
+<a class="nav selected" id="breeds" href="/views/breed">all breeds</a>
+<a class="nav" id="hairless" href="/views/hairless">hairless</a>
+<a class="nav" id="experimental" href="/views/experimental">experimental</a>
+<a class="nav" id="rare" href="/views/rare">rare</a>
+<a class="nav" id="indoor" href="/views/indoor">indoor</a>
+</div>
+
 <div class="catContainer">
 {{#each catBreeds}}
-    <a href="../breeds/{{name}}">
     <div class="breed">
+    <a href="../breeds/{{name}}">
         <h3>{{name}}</h3>
-        <img src="{{image.url}}">
-    </div>
+        <img src="{{#if image.url}}{{image.url}}{{else}}https://media0.giphy.com/media/26gswUHdouGJf4L6w/giphy.gif{{/if}}">
     </a>
+    </div>
 {{/each}}
 </div>

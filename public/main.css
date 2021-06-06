@@ -1,6 +1,25 @@
-img {
-    width: 200px;
-    /* height: 200px; */
+body {
+    background-color: #EFDDFD;
+}
+
+a img {
+    float: left;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+}
+
+#showData {
+    width: 400px;
+    border-radius: 30px;
+}
+
+#logo {
+    mix-blend-mode: multiply;
+    display: inline;
+    margin: -30px;
+    height: 150px;
+    width: 150px;
 }
 
 .catContainer {
@@ -8,12 +27,156 @@ img {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 120px;
+}
+
+.infoContainer {
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.infoContainer p {
+    color: #36065B;
+    max-width: 600px;
 }
 
 .breed {
     padding: 10px;
 }
 
+.breed:hover h3 {
+    color: #A33Af2;
+  }
+
 .checked {
     color: orange;
+  }
+
+  h1 {
+    font-family: 'Neucha', cursive;
+    font-size: 60px;
+    text-align: center;
+    color: black;
+    display: inline;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    color: #36065B;
+  }
+
+  h3 {
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    text-align: center;
+    color: #36065B;
+  }
+  h4 {
+    font-family: 'Neucha', cursive;
+    font-size: 60px;
+    text-align: center;
+    color: #36065B;
+    padding-top: 100px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+      font-size: 25px;
+      font-family: 'Neucha', cursive;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #36065B;
+    z-index: 2;
+    padding-bottom: 10px;
+  }
+
+  .navContainer {
+      display: flex;
+      justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: #EFDDFD;
+    top: 100px;
+    
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #logoTitle {
+     display: flex;
+     justify-content: center;
+     position: fixed;
+     width: 100%;
+     background-color: #EFDDFD;
+    top: 0px;
+  }
+
+  .selected {
+      color: #A33Af2;
+  }
+
+  #info {
+      display: inline;
+      margin-left: 10px;
+      position: relative;
+  }
+
+  #info p {
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+  }
+
+  #info label {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: #36065B;
+    padding-left: 15px;
+  }
+
+  #wikiLink {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: #36065B;
+    position: absolute;
+    bottom: -20px;
+    left: -70px
+  }
+
+  .clickable-image{
+    width:30vh;
+  }
+  
+  .image-open{
+    animation: scaleUp 1s forwards linear;
+  }
+  
+  .image-close{
+    animation: scaleDown 1s forwards linear;
+  }
+  
+  .clickable-image:hover{
+    cursor: pointer;
+  }
+  
+  @keyframes scaleUp{
+    from{
+      width:30vh;
+    }to{
+      width:60vh;
+    }
+  }
+  @keyframes scaleDown{
+    from{
+      width:60vh;
+    }to{
+      width:30vh;
+    }
   }
