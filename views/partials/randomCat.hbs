@@ -12,6 +12,19 @@ var oXHR = new XMLHttpRequest();
 </script>
 
 <script>
+var oXHR1 = new XMLHttpRequest();
+ oXHR1.onreadystatechange = reportStatus;
+    oXHR1.open("GET", "https://aws.random.cat/meow", true);  
+    oXHR1.send();
+    function reportStatus() {
+        if (oXHR.readyState == 4) {		
+            var x = JSON.parse(this.responseText)
+            document.getElementById('showData1').src = x.file;
+        }
+    }
+</script>
+
+<script>
 var nextoXHR = new XMLHttpRequest();
  nextoXHR.onreadystatechange = reportStatus;
     nextoXHR.open("GET", "https://catfact.ninja/fact", true);  
@@ -23,10 +36,12 @@ var nextoXHR = new XMLHttpRequest();
         }
     }
 </script>
-
-<div class="randomContainer">
-    <h2>Random Cat Fact</h2>
+<div class="factContainer">
     <p id="catFact"></p>
-    <h2>Random Cat Photo</h2>
-    <img id="showData" src="">
+</div>
+<div class="randomContainer">
+    <img class="randomImage" id="showData" src="">
+    <img class="randomImage" id="showData1" src="">
+    <img class="randomImage" src="https://cataas.com/cat">
+   
 </div>

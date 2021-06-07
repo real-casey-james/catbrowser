@@ -7,11 +7,14 @@ a img {
     width: 170px;
     height: 170px;
     object-fit: cover;
+    border-radius: 30px;
 }
 
-#showData {
-    width: 400px;
+.randomImage {
+    height: 300px;
     border-radius: 30px;
+    margin: 0 20px;
+
 }
 
 #logo {
@@ -31,9 +34,8 @@ a img {
 }
 
 .randomContainer {
-    padding-top: 120px;
+    padding: 20px;
     text-align: center;
-    max-width: 600px;
     margin: auto;
 }
 
@@ -83,7 +85,9 @@ a img {
     font-size: 20px;
     text-align: center;
     color: #36065B;
+    margin: 10px 0;
   }
+
   h4 {
     font-family: 'Neucha', cursive;
     font-size: 60px;
@@ -91,6 +95,14 @@ a img {
     color: #36065B;
     padding-top: 100px;
     margin-bottom: 10px;
+  }
+
+  h5 {
+    font-family: 'Neucha', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #36065B;
+    margin-bottom: 20px;
   }
 
   .nav {
@@ -116,6 +128,9 @@ a img {
   a {
     text-decoration: none;
   }
+  a:hover {
+    color: #A33Af2;
+  }
 
   #logoTitle {
      display: flex;
@@ -135,11 +150,13 @@ a img {
       display: inline;
       margin-left: 10px;
       position: relative;
+      
   }
 
   #info p {
       font-size: 20px;
       font-family: 'Roboto', sans-serif;
+      
   }
 
   #info label {
@@ -162,19 +179,23 @@ a img {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     color: #36065B;
-    margin: 30px 0;
+    padding-top: 120px;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
   }
 
   .clickable-image{
-    width:30vh;
+    height:30vh;
+    border-radius: 30px;
   }
   
   .image-open{
-    animation: scaleUp 1s forwards linear;
+    animation: scaleUp 0.5s forwards linear;
   }
   
   .image-close{
-    animation: scaleDown 1s forwards linear;
+    animation: scaleDown 0.5s forwards linear;
   }
   
   .clickable-image:hover{
@@ -183,15 +204,116 @@ a img {
   
   @keyframes scaleUp{
     from{
-      width:30vh;
+      height:30vh;
     }to{
-      width:60vh;
+      height:60vh;
     }
   }
   @keyframes scaleDown{
     from{
-      width:60vh;
+      height:60vh;
     }to{
-      width:30vh;
+      height:30vh;
     }
   }
+
+  input {
+    height: 40px;
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    color: #36065B;
+    border-radius: 10px;
+    border: 1px solid #36065B;
+    background-color: #EFDDFD;
+  }
+
+  input:hover {
+    border: 1px solid white;
+  }
+
+  #name {
+    width: 100px;
+    background-color: #EFDDFD;
+    border-radius: 10px;
+    border: 1px solid #36065B;
+    padding-left: 10px;
+  }
+  
+  #comment {
+    width: 200px;
+    background-color: #EFDDFD;
+    border-radius: 10px;
+    border: 1px solid #36065B;
+    padding-left: 10px;
+  }
+
+  .form {
+    text-align: center;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+.dialog-2 {
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+  background-color:#FFF;
+  color: #666;
+  font: normal 12px "Segoe UI", Arial, Sans-serif;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #36065B;
+  font-family: 'Neucha', cursive;
+  font-size: 18px;
+  color: #36065B;
+  background-color: #EFDDFD;
+}
+
+.dialog-2:before,
+.dialog-2:after {
+  content: "\0020";
+  display:block;
+  position:absolute;
+  top:30px;
+  left:-30px;
+  z-index:2;
+  transform: rotate(270deg);
+  width: 0;
+  height: 0;
+  overflow:hidden;
+  border: solid 20px transparent;
+  border-top: 0;
+  border-bottom-color:#9b71bb;
+}
+
+.commentContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.commentName {
+  position: relative;
+  right: 10px;
+  top: 35px;
+  font-family: 'Neucha', cursive;
+  font-size: 17px;
+  color: #36065B;
+}
+
+button {
+  font-family: 'Neucha', cursive;
+  font-size: 14px;
+  color: #36065B;
+  margin: 50px 0 10px 0;
+  background-color: #EFDDFD;
+  border: 1px solid #36065B;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover {
+  border: 1px solid white;
+}
